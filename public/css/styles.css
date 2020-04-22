@@ -1,0 +1,800 @@
+/* CZCIONKI */
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Sacramento', cursive;
+font-family: 'Sarala', sans-serif; */
+
+/* KOLORY */
+/* background-color: #8eb8ec; */
+/* color: #113f67;
+background-color: #f3f9fb; */
+
+/* HTML ELEMENTS */
+body {
+  /* font-family: 'Sarala', sans-serif; */
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: "Roboto", sans-serif;
+  color: #113f67;
+  text-align: center;
+  /* kolor z najciemniejszej ksiązki z logo title */
+  /* color: #263a5e; */
+  /* box-sizing: border-box; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+span {
+  font-weight: 700;
+}
+
+/* SECTION TITLE */
+#title {
+  /* background-color: #f3f9fb; */
+  /* background-color: #3d9ee1; */
+  /* background-color: #242254; */
+}
+
+.container-fluid-title {
+  /* przy container-fluid width: 100%  */
+  /* mocno przesuwaja layout -> nie wiem czy mi sie to podoba -> zobaczyc jak na innych www */
+  /* poczatkowo było padding: 3% 15% ALE 3% robilo za duzo przerwy na gorze i dole */
+  padding: 0 0%;
+  background-image: url("../images/intro.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.h1-title {
+  /* font-family: 'Montserrat', sans-serif;
+    font-weight: 900; */
+
+  font-size: 2.5rem;
+  line-height: 1.5;
+  padding-top: 80px;
+  padding-left: 85px;
+  text-align: left;
+  color: white;
+  /* color: #113f67; */
+
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+  /* border-bottom: 1px solid #113f67; */
+  /* border-bottom: 1px solid white; */
+
+  padding-bottom: 0px;
+  margin-bottom: 0.2rem;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+}
+
+.logo {
+  width: 25%;
+  padding-bottom: 8px;
+}
+
+.logo-title {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  /* color: #113f67; */
+  color: white;
+  /* padding: 18px 0px 0px 15px; */
+  /* daje margin, a nie padding, bo padding przesuwa mi razem z border */
+  margin: 20px 0px auto 15px;
+}
+
+/* TITLE IMAGE */
+
+.title-image {
+  /* width: 100%; */
+  /* margin-left: 7%; */
+
+  width: 90%;
+  /* padding-left: 12%; */
+  position: relative;
+  left: 80px;
+}
+
+.text-image {
+  width: 100%;
+  margin-top: 15%;
+}
+
+/* BUTTON */
+
+.btn-title {
+  margin: 5% 3% 5% 0;
+}
+
+/* KONIEC SECTION TITLE */
+/* --------------------------------------------------------------------------------------------- */
+
+/* SECTION FEATURES */
+
+#co-nas-wyroznia {
+  background-color: white;
+}
+
+.container-fluid-features {
+  /* mogę te padding zawrzec w #features -> minimalne roznica w lini align -> tak leoiej dopasowa (tak samo dopasowana jak sekcja title)*/
+  padding: 3% 8%;
+}
+
+.h2-features {
+  margin: 0 auto 2rem auto;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.feature-box {
+  padding: 2%;
+}
+
+.icon {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.h3-feature {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* KONIEC SECTION FEATURES */
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* SECTION SKILLS */
+/* co do zasady tutaj mogloby byc bez container-fluid bo jest tylko jedna kolumna */
+#oferta {
+  background-color: #eff9ff;
+  color: #113f67;
+}
+
+.container-fluid-skills {
+  padding: 3% 15%;
+}
+
+.h2-skills {
+  margin: 0 auto 2rem auto;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.mobile {
+  display: none;
+}
+
+.skill-row {
+  margin: 10px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.skill-column {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.row-skills .row:nth-child(even) img {
+  width: 160%;
+  float: left;
+}
+
+.row-skills .row:nth-child(odd) img {
+  width: 160%;
+  float: right;
+}
+
+/* KONIEC SECTION SKILLS */
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* SERCTION HOW IT WORKS */
+
+.container-fluid-how-it-works {
+  padding: 3% 15%;
+}
+
+.how-it-works-box {
+  /* jak bedzie duzo tekstu to ewentualnie padding 2% zrobic */
+  padding: 1%;
+  text-align: center;
+}
+
+.workstep-spacer {
+  content: "";
+  height: 40px;
+  display: block;
+  background-image: url("../images/next.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #113f67;
+  margin-top: 24px;
+  margin-left: 30px;
+}
+
+
+/* KONIEC SECTION HOW IT WORKS */
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* SECTION TESTIMONIALS */
+
+
+#opinie {
+
+  background-color: #eff9ff;
+  color: #113f67;
+  padding: 1% 15%;
+}
+
+.h2-testimonials {
+  margin-bottom: 18px;
+  margin-top: 18px;
+}
+
+.image-testimonial {
+  width: 50%;
+  margin: 25px auto;
+}
+
+/* .container-fluid-testimonial {
+  padding: 3% 15%;
+} */
+
+
+.carousel-control-next-icon {
+  background-image: url("../images/next.png");
+}
+
+.carousel-control-prev-icon {
+  background-image: url("../images/prev.png");
+}
+
+/* KONIEC SECTION TESTIMONIALS */
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+/* SECTION CONTACT */
+
+#kontakt {
+  /* background-color: #226597; */
+  /* background-color: #dae9ff; */
+  background-color: white;
+  /* color: #f3f9fb; */
+  color: #113f67;
+}
+
+
+
+.container-fluid-contact {
+  padding: 3% 0;
+}
+
+.contact-message {
+  width: 40%;
+  margin: 20px auto 30px;
+}
+
+.btn-contact {
+  margin: 0 15px 0;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 25px;
+  font-weight: 500;
+  padding: 15px;
+  /* background-color: #eff9ff; */
+  /* color: #113f67; */
+  background-color: #113f67;
+  color: white;
+  box-shadow: 1px 1px 20px 0px #000000;
+  -webkit-box-shadow: 1px 1px 20px 0px #000000;
+  -moz-box-shadow: 1px 1px 20px 0px #000000;
+  text-shadow: 0px 0px 1px #000000;
+  border: solid #113f67 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-contact:hover {
+  background-color: #113f67;
+  border: solid #eff9ff 1px;
+  color: white;
+  /* background-color: #eff9ff;
+  border: solid #113f67 1px;
+  color: #113f67; */
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* KONIEC SECTION CONTACT */
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+/* SECTION FORM */
+#form {
+  /* background-color: #eff9ff; */
+  background-color: white;
+  color: #113f67;
+  padding: 3% 25%;
+  text-align: left;
+}
+
+.h2-form {
+  text-align: center;
+  margin: 0 auto 2rem auto;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.field-other-thesis {
+  margin-left: 10px;
+}
+
+.btn-form-submit {
+  /* margin-top: 10px; */
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 25px;
+  /* background-color: #eff9ff; */
+  /* color: #113f67; */
+  background-color: #113f67;
+  color: white;
+  /* box-shadow: 1px 1px 20px 0px #000000;
+  -webkit-box-shadow: 1px 1px 20px 0px #000000;
+  -moz-box-shadow: 1px 1px 20px 0px #000000;
+  text-shadow: 0px 0px 1px #000000; */
+  border: solid #113f67 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-form-submit:hover {
+  background-color: #113f67;
+  border: solid white 1px;
+  color: white;
+  text-decoration: none;
+}
+
+.form-check-consent {
+  margin: 20px 0 25px 0;
+  font-size: 14px;
+}
+
+/* KONIEC SECTION FORM */
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+/* SECTION FOOTER */
+
+#footer {
+  background-color: #113f67;
+  /* margin: 0; */
+  text-decoration: none;
+}
+
+.container-fluid-footer {
+  padding: 15px;
+}
+
+.footer-link {
+  color: #eff9ff;
+  font-family: "Montserrat", sans-serif;
+  margin: 20px 10px;
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-law:hover {
+  color: #3d9ee1;
+  text-decoration: none;
+}
+
+.copyright {
+  color: #eff9ff;
+  font-size: 12px;
+  padding: 2px;
+  margin: 5px 10px 0 10px;
+}
+
+.footer-law {
+  color: #eff9ff;
+  font-size: 12px;
+  padding: 2px;
+  margin: 10px 10px 10px 0;
+
+}
+
+
+/* KONIEC SECTION FOOTER*/
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+/* <!-- PRIVACY-POLICY --> */
+#privacy-policy {
+  padding: 3% 15%;
+  line-height: 2;
+}
+
+#privacy-policy h1,
+#privacy-policy h2 {
+  margin-bottom: 25px;
+}
+
+#privacy-policy ol {
+  text-align: left;
+}
+
+/* KONIEC SECTION PRIVACY-POLICY*/
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* <!-- STATUTE --> */
+#statute {
+  padding: 3% 15%;
+  line-height: 2;
+}
+
+#statute h1,
+#statute h2 {
+  margin-bottom: 25px;
+}
+
+#statute ol {
+  text-align: left;
+}
+
+/* KONIEC SECTION PRIVACY-POLICY*/
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+/* COOKIES */
+
+#cookieinfo * {
+  margin: 0px;
+  padding: 0px;
+}
+
+#cookieinfo {
+  position: fixed;
+  font-size: 12px;
+  font-family: Arial, Verdana, sans-serif;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  /* background-color: #323334; */
+  background-color: #113f67;
+  padding: 20px;
+  box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+#cookieinfo h6 {
+  font-size: 16px;
+  font-weight: bold;
+  /* color: #cdd7da; */
+  color: #f3f9fb;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+  margin-bottom: 7px;
+}
+
+#cookieinfo p {
+  font-size: 12px;
+  /* color: #afb4bc; */
+  color: #f3f9fb;
+  line-height: 1.5em;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+}
+
+#cookieinfo a {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #113f67;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f3f9fb;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+
+#cookieinfo a:hover {
+  background-color: #f3f9fb;
+}
+
+/* MEDIA QUERIES */
+/* SKONCZYLAM DOPASOWYWAC SECTION TITLE I FEATURES -> zostala reszta sekcji, PP, regulamin i form */
+
+/* IPAD */
+@media (max-width: 991px) {
+  #title {
+    text-align: center;
+  }
+
+  .h1-title {
+    font-size: 2rem;
+    color: #113f67;
+    text-align: center;
+    padding-top: 40px;
+    margin: 0 auto;
+  }
+
+  .logo-title {
+    font-size: 1.6rem;
+    color: #113f67;
+    /* color: white; */
+  }
+
+  .h2-features,
+  .h2-skills {
+    font-size: 1.8rem;
+  }
+
+  .h2-skills {
+    margin-bottom: 18px;
+  }
+
+  .h3-feature,
+  h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .mobile {
+    display: inline;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  /* cos zrobic z img, zeby szybciej na dol przechodzil tj. pod napis */
+  .title-image {
+    position: relative;
+    padding: 0;
+    top: 0;
+    left: 0;
+  }
+
+  /* #title div.col-lg-8,
+  #title h1.col-md-12 {
+    padding: 0;
+  } */
+
+  .row-skills .row:nth-child(even) img,
+  .row-skills .row:nth-child(odd) img {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  #oferta p {
+    text-align: center;
+  }
+
+  /* how it works */
+  .workstep-spacer {
+    background-image: url("../images/next-ipad.png");
+    /* margin-top: 24px; */
+    margin: 15px auto;
+    text-align: center;
+    width: 40px;
+  }
+
+  /* testimonials */
+
+  #opinie {
+    padding: 1% 5%;
+  }
+
+  .h2-testimonials {
+    font-size: 1.8rem;
+  }
+
+  .image-testimonial {
+    width: 70%;
+    /* margin: 25px auto; */
+  }
+
+  /* .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  } */
+
+  /* contact */
+  .h2-contact {
+    font-size: 1.8rem;
+  }
+
+  /* form */
+
+  #form {
+    color: #113f67;
+    padding: 3% 10%;
+
+  }
+
+  .h2-form {
+    font-size: 2rem;
+  }
+
+  /* policy-privacy i  statute*/
+
+  #statute,
+  #privacy-policy {
+    padding: 3% 10%;
+    line-height: 1.5;
+  }
+
+  #statute h1,
+  #privacy-policy h1 {
+    font-size: 2rem;
+  }
+
+  #statute h2,
+  #privacy-policy h2 {
+    font-size: 1.8rem;
+  }
+
+
+
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  #title {
+    text-align: center;
+  }
+
+  .h1-title {
+    font-size: 1.4rem;
+    color: #113f67;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 0;
+  }
+
+  .logo-title {
+    font-size: 1.2rem;
+    color: #113f67;
+    /* color: white; */
+  }
+
+  .h2-features,
+  .h2-skills {
+    font-size: 1.4rem;
+  }
+
+  .h3-feature,
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .title-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .row-skills .row:nth-child(even) img,
+  .row-skills .row:nth-child(odd) img {
+    width: 80%;
+    /* margin: 0 auto; */
+  }
+
+  .h2-skills {
+    margin-bottom: 10px;
+  }
+
+  #oferta p {
+    text-align: center;
+  }
+
+  /* testimonials */
+
+  .h2-testimonials {
+    font-size: 1.4rem;
+  }
+
+  .image-testimonial {
+    width: 100%;
+    /* margin: 25px auto; */
+  }
+
+  /* contact-me */
+
+
+  .contact-message {
+    width: 60%;
+  }
+
+  .h2-contact {
+    font-size: 1.4rem;
+  }
+
+  .btn-email {
+    margin-bottom: 20px;
+  }
+
+  /* form */
+  .form-frame {
+    font-size: 15px;
+  }
+
+  .h2-form {
+    font-size: 1.4rem;
+  }
+
+  /* policy-privacy i  statute*/
+
+  #statute,
+  #privacy-policy {
+    padding: 3% 8%;
+  }
+
+  #statute ol,
+  #privacy-policy ol {
+    font-size: 15px;
+  }
+
+  #statute h1,
+  #privacy-policy h1 {
+    font-size: 1.4rem;
+  }
+
+  #statute h2,
+  #privacy-policy h2 {
+    font-size: 1.4rem;
+  }
+
+}
