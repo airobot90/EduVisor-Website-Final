@@ -1,0 +1,208 @@
+<%- include('./partials/header-form.ejs'); -%>
+
+<%- include('./partials/title-navbar.ejs'); -%>
+
+<!-- FORMULARZ -->
+<section id="form">
+
+    <div class=" container-fluid container-fluid-form">
+        <h2 class="h2-form">Formularz zlecenia</h2>
+
+        <form class="form-frame" name="myForm" action="/formularz" method="POST">
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-6">
+                    <input type="email" name="email" class="form-control" required autofocus>
+                </div>
+            </div>
+
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Rodzaj pracy</legend>
+                    <div class="col-sm-10">
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="typeOfThesis" value="Praca licencjacka"
+                                checked>
+                            <label class="form-check-label">
+                                Praca licencjacka
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="typeOfThesis" value="Praca magisterska">
+                            <label class="form-check-label">
+                                Praca magisterska
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="typeOfThesis" value="Praca dyplomowa">
+                            <label class="form-check-label">
+                                Praca podyplomowa
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="typeOfThesis" value="Praca zaliczeniowa">
+                            <label class="form-check-label">
+                                Praca zaliczeniowa, semestralna, wypracowanie, esej lub prezentacja
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="typeOfThesis" value="Inna">
+                            <label class=" form-check-label">
+                                Inna
+                                <input class="field-other-thesis" type="text" name="typeOfThesis" placeholder="jaka?">
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class=" form-group row">
+                <div class="col-sm-2">Zakres pomocy</div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="scopeOfHelp"
+                            value="Pomoc w napisaniu pracy licencjackiej, magisterskiej lub dyplomowej">
+                        <label class="form-check-label">
+                            Pomoc w napisaniu pracy licencjackiej, magisterskiej lub podyplomowej
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="scopeOfHelp"
+                            value="Pomoc w napisaniu pracy zaliczeniowej, semestralnej, wypracowania, eseju lub prezentacji">
+                        <label class="form-check-label">
+                            Pomoc w napisaniu pracy zaliczeniowej, semestralnej, wypracowania, eseju lub prezentacji
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="scopeOfHelp"
+                            value="Całościowy nadzór nad pracą licencjacką, magisterską lub dyplomową">
+                        <label class="form-check-label">
+                            Całościowy nadzór nad pracą licencjacką, magisterską lub podyplomową
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="scopeOfHelp"
+                            value="Szczegółowy plany pracy wraz z bibliografią">
+                        <label class="form-check-label">
+                            Szczegółowy plany pracy wraz z bibliografią
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="scopeOfHelp"
+                            value="Stworzenie rozdziału/rozdziałów teoretycznych">
+                        <label class="form-check-label">
+                            Stworzenie rozdziału/rozdziałów teoretycznych
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="scopeOfHelp"
+                            value="Stworzenie rozdziału badawczego">
+                        <label class="form-check-label">
+                            Stworzenie rozdziału badawczego
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="scopeOfHelp" value="Model ekonometryczny">
+                        <label class="form-check-label">
+                            Model ekonometryczny
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="scopeOfHelp"
+                            value="Korekta pracy pod względem językowym, stylistycznym i merytorycznym i/lub pomoc edytorska">
+                        <label class="form-check-label">
+                            Korekta pracy pod względem językowym, stylistycznym i merytorycznym i/lub pomoc
+                            edytorska
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="scopeOfHelp"
+                            value="Korekta antyplagiatowa">
+                        <label class="form-check-label">
+                            Korekta antyplagiatowa
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="scopeOfHelp" value="Inne">
+                        <label class="form-check-label">
+                            Inne
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Termin na wykonanie usługi</legend>
+                    <div class="col-sm-10">
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="timeOfProject"
+                                value="Ekspresowy (1-3 dni)" checked>
+                            <label class="form-check-label">
+                                Ekspresowy (1-3 dni)
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="timeOfProject" value="Szybki (4-7 dni)">
+                            <label class="form-check-label">
+                                Szybki (4-7 dni)
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="timeOfProject"
+                                value="Standardowy (ponad tydzień)">
+                            <label class="form-check-label">
+                                Standardowy (ponad tydzień)
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-group row">
+                <div class="col-sm-2">Opis zlecenia</div>
+                <div class="col-sm-10">
+                    <textarea name="description" class="form-control" rows="6"
+                        placeholder="Podaj w tym miejscu jak najwięcej szczegółów dotyczących tego w jakim zakresie możemy Ci pomóc, dołączając materiały niezbędne do wykonania zlecenia. Zależnie od zakresu pomocy, prosimy m.in. o podanie tematu pracy, treści zadania, struktury opracowania i liczby stron, jak również o przesłanie np. planu pracy, bazy danych, pracy, która ma zostać poprawiona czy raportu JSA."></textarea>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-2">Załączniki</div>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control-file" name="files"">
+                </div>
+            </div>
+
+            <div class=" form-check form-check-consent">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
+                    <label class="form-check-label" for="defaultCheck1">
+                        <i>Zapoznałam(em) się i akceptuję <a href="/regulamin">regulamin</a> i
+                            <a href="polityka-prywatnosci">politykę prywatności</a> firmy EduVisor Sp. z o.o.</i>
+                    </label>
+                </div>
+
+                <div class="g-recaptcha" data-callback="capcha_filled" data-expired-callback="capcha_expired"
+                    data-sitekey="6Ld1VewUAAAAACQVZkrVCJGYQkAtkVXQV6cwRI2J"></div>
+
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button class="btn-form-submit" id="submit_details" type="submit" value='Submit'>Wyślij</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+</section>
+
+<%- include('./partials/footer.ejs'); -%>

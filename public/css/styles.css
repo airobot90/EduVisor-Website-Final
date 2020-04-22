@@ -1,25 +1,8 @@
-/* CZCIONKI */
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Merriweather', serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Sacramento', cursive;
-font-family: 'Sarala', sans-serif; */
-
-/* KOLORY */
-/* background-color: #8eb8ec; */
-/* color: #113f67;
-background-color: #f3f9fb; */
-
 /* HTML ELEMENTS */
 body {
-  /* font-family: 'Sarala', sans-serif; */
-  /* font-family: 'Montserrat', sans-serif; */
   font-family: "Roboto", sans-serif;
   color: #113f67;
   text-align: center;
-  /* kolor z najciemniejszej ksiązki z logo title */
-  /* color: #263a5e; */
-  /* box-sizing: border-box; */
 }
 
 h1,
@@ -36,16 +19,8 @@ span {
 }
 
 /* SECTION TITLE */
-#title {
-  /* background-color: #f3f9fb; */
-  /* background-color: #3d9ee1; */
-  /* background-color: #242254; */
-}
 
 .container-fluid-title {
-  /* przy container-fluid width: 100%  */
-  /* mocno przesuwaja layout -> nie wiem czy mi sie to podoba -> zobaczyc jak na innych www */
-  /* poczatkowo było padding: 3% 15% ALE 3% robilo za duzo przerwy na gorze i dole */
   padding: 0 0%;
   background-image: url("../images/intro.jpg");
   background-repeat: no-repeat;
@@ -55,25 +30,17 @@ span {
 }
 
 .h1-title {
-  /* font-family: 'Montserrat', sans-serif;
-    font-weight: 900; */
-
   font-size: 2.5rem;
   line-height: 1.5;
   padding-top: 80px;
   padding-left: 85px;
   text-align: left;
   color: white;
-  /* color: #113f67; */
-
 }
 
 /* NAVIGATION BAR */
 
 .navbar {
-  /* border-bottom: 1px solid #113f67; */
-  /* border-bottom: 1px solid white; */
-
   padding-bottom: 0px;
   margin-bottom: 0.2rem;
 }
@@ -95,21 +62,14 @@ span {
   display: inline-block;
   font-weight: 700;
   font-size: 1.5rem;
-  /* color: #113f67; */
   color: white;
-  /* padding: 18px 0px 0px 15px; */
-  /* daje margin, a nie padding, bo padding przesuwa mi razem z border */
   margin: 20px 0px auto 15px;
 }
 
 /* TITLE IMAGE */
 
 .title-image {
-  /* width: 100%; */
-  /* margin-left: 7%; */
-
   width: 90%;
-  /* padding-left: 12%; */
   position: relative;
   left: 80px;
 }
@@ -135,7 +95,6 @@ span {
 }
 
 .container-fluid-features {
-  /* mogę te padding zawrzec w #features -> minimalne roznica w lini align -> tak leoiej dopasowa (tak samo dopasowana jak sekcja title)*/
   padding: 3% 8%;
 }
 
@@ -164,7 +123,6 @@ span {
 /* --------------------------------------------------------------------------------------------- */
 
 /* SECTION SKILLS */
-/* co do zasady tutaj mogloby byc bez container-fluid bo jest tylko jedna kolumna */
 #oferta {
   background-color: #eff9ff;
   color: #113f67;
@@ -216,7 +174,6 @@ span {
 }
 
 .how-it-works-box {
-  /* jak bedzie duzo tekstu to ewentualnie padding 2% zrobic */
   padding: 1%;
   text-align: center;
 }
@@ -233,13 +190,11 @@ span {
   margin-left: 30px;
 }
 
-
 /* KONIEC SECTION HOW IT WORKS */
 
 /* --------------------------------------------------------------------------------------------- */
 
 /* SECTION TESTIMONIALS */
-
 
 #opinie {
 
@@ -258,11 +213,6 @@ span {
   margin: 25px auto;
 }
 
-/* .container-fluid-testimonial {
-  padding: 3% 15%;
-} */
-
-
 .carousel-control-next-icon {
   background-image: url("../images/next.png");
 }
@@ -275,7 +225,6 @@ span {
 
 /* --------------------------------------------------------------------------------------------- */
 
-
 /* SECTION CONTACT */
 
 #kontakt {
@@ -285,8 +234,6 @@ span {
   /* color: #f3f9fb; */
   color: #113f67;
 }
-
-
 
 .container-fluid-contact {
   padding: 3% 0;
@@ -302,12 +249,9 @@ span {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  /* font-family: "Montserrat", sans-serif; */
   font-size: 25px;
   font-weight: 500;
   padding: 15px;
-  /* background-color: #eff9ff; */
-  /* color: #113f67; */
   background-color: #113f67;
   color: white;
   box-shadow: 1px 1px 20px 0px #000000;
@@ -324,9 +268,6 @@ span {
   background-color: #113f67;
   border: solid #eff9ff 1px;
   color: white;
-  /* background-color: #eff9ff;
-  border: solid #113f67 1px;
-  color: #113f67; */
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
@@ -336,7 +277,6 @@ span {
 /* KONIEC SECTION CONTACT */
 
 /* --------------------------------------------------------------------------------------------- */
-
 
 /* SECTION FORM */
 #form {
@@ -359,21 +299,14 @@ span {
 }
 
 .btn-form-submit {
-  /* margin-top: 10px; */
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   font-size: 18px;
   font-weight: 500;
   padding: 10px 25px;
-  /* background-color: #eff9ff; */
-  /* color: #113f67; */
   background-color: #113f67;
   color: white;
-  /* box-shadow: 1px 1px 20px 0px #000000;
-  -webkit-box-shadow: 1px 1px 20px 0px #000000;
-  -moz-box-shadow: 1px 1px 20px 0px #000000;
-  text-shadow: 0px 0px 1px #000000; */
   border: solid #113f67 1px;
   text-decoration: none;
   display: inline-block;
@@ -405,7 +338,6 @@ span {
 
 #footer {
   background-color: #113f67;
-  /* margin: 0; */
   text-decoration: none;
 }
 
@@ -438,9 +370,7 @@ span {
   font-size: 12px;
   padding: 2px;
   margin: 10px 10px 10px 0;
-
 }
-
 
 /* KONIEC SECTION FOOTER*/
 
@@ -500,7 +430,6 @@ span {
   left: 0px;
   bottom: 0px;
   right: 0px;
-  /* background-color: #323334; */
   background-color: #113f67;
   padding: 20px;
   box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.5);
@@ -510,7 +439,6 @@ span {
 #cookieinfo h6 {
   font-size: 16px;
   font-weight: bold;
-  /* color: #cdd7da; */
   color: #f3f9fb;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
   margin-bottom: 7px;
@@ -518,7 +446,6 @@ span {
 
 #cookieinfo p {
   font-size: 12px;
-  /* color: #afb4bc; */
   color: #f3f9fb;
   line-height: 1.5em;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
@@ -559,7 +486,7 @@ span {
     font-size: 2rem;
     color: #113f67;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 25px;
     margin: 0 auto;
   }
 
@@ -592,18 +519,12 @@ span {
     display: none;
   }
 
-  /* cos zrobic z img, zeby szybciej na dol przechodzil tj. pod napis */
   .title-image {
     position: relative;
     padding: 0;
     top: 0;
     left: 0;
   }
-
-  /* #title div.col-lg-8,
-  #title h1.col-md-12 {
-    padding: 0;
-  } */
 
   .row-skills .row:nth-child(even) img,
   .row-skills .row:nth-child(odd) img {
@@ -618,7 +539,6 @@ span {
   /* how it works */
   .workstep-spacer {
     background-image: url("../images/next-ipad.png");
-    /* margin-top: 24px; */
     margin: 15px auto;
     text-align: center;
     width: 40px;
@@ -636,13 +556,8 @@ span {
 
   .image-testimonial {
     width: 70%;
-    /* margin: 25px auto; */
   }
 
-  /* .carousel-control-prev,
-  .carousel-control-next {
-    width: 10%;
-  } */
 
   /* contact */
   .h2-contact {
@@ -654,7 +569,6 @@ span {
   #form {
     color: #113f67;
     padding: 3% 10%;
-
   }
 
   .h2-form {
@@ -678,9 +592,6 @@ span {
   #privacy-policy h2 {
     font-size: 1.8rem;
   }
-
-
-
 }
 
 /* MOBILE */
@@ -700,7 +611,6 @@ span {
   .logo-title {
     font-size: 1.2rem;
     color: #113f67;
-    /* color: white; */
   }
 
   .h2-features,
@@ -729,7 +639,6 @@ span {
   .row-skills .row:nth-child(even) img,
   .row-skills .row:nth-child(odd) img {
     width: 80%;
-    /* margin: 0 auto; */
   }
 
   .h2-skills {
@@ -748,7 +657,6 @@ span {
 
   .image-testimonial {
     width: 100%;
-    /* margin: 25px auto; */
   }
 
   /* contact-me */
@@ -796,5 +704,4 @@ span {
   #privacy-policy h2 {
     font-size: 1.4rem;
   }
-
 }

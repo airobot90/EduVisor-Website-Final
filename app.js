@@ -1,7 +1,3 @@
-// npm init --y
-// jak chce go otworzyc na innym komputerze to bez npm init, a za to npm install
-// npm i express body-parser mongoose dotenv express-favicon ejs nodemailer
-
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -9,7 +5,6 @@ const mongoose = require("mongoose");
 const ejs = require("ejs");
 const favicon = require("express-favicon");
 const nodemailer = require("nodemailer");
-
 
 const transporter = nodemailer.createTransport({
   service: process.env.SERVICE_MAIL,
@@ -30,7 +25,7 @@ const app = express();
 
 app.use(favicon(__dirname + "/public/favicon.ico"));
 
-// app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
 app.use(
   bodyParser.urlencoded({
@@ -45,18 +40,12 @@ mongoose.connect(process.env.URL_DB, {
   useUnifiedTopology: true,
 });
 
-// tworzymy strukture naszej bazy
 const userSchema = new mongoose.Schema({
-  // juz w schema moge dodac walidacje -> tutaj, ze pole name jest obowiazkowe do wypelnienia
   email: String,
   typeOfThesis: Array,
   scopeOfHelp: Array,
   timeOfProject: Array,
   description: String,
-  // https://www.npmjs.com/package/multer-gridfs-storage
-  // https://stackoverflow.com/questions/54788507/how-to-combine-schema-model-with-file-upload-in-node-js-and-mongodb
-  // https://docs.mongodb.com/manual/core/gridfs/
-  // files: { data: Buffer, contentType: String } dobre jak pliki maja do 16 MB
   files: Array,
 });
 
@@ -64,27 +53,32 @@ const User = mongoose.model("User", userSchema);
 
 // 1. ROUTE -> STRONA GŁÓWNA
 
-// chce dostac zawartosc /, w odpowiedzi dostaje plik html
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.render("home", {
+    title: "EduVisor - Twoja kompleksowa pomoc na studiach",
+  });
 });
 
 app.get("/formularz", function (req, res) {
-  res.sendFile(__dirname + "/form.html")
+  res.render("form", {
+    title: "Formularz zlecenia - EduVisor",
+  })
 });
 
 
 app.get("/regulamin", function (req, res) {
-  res.sendFile(__dirname + "/statute.html");
+  res.render("statute", {
+    title: "Regulamin - EduVisor"
+  })
 });
 
 app.get("/polityka-prywatnosci", function (req, res) {
-  res.sendFile(__dirname + "/privacy-policy.html");
+  res.render("privacy-policy", {
+    title: "Polityka prywatności - EduVisor"
+  });
 });
 
 app.post("/formularz", function (req, res) {
-
-  // teraz mozemy stworzyc item document/nowy rekord
   const user = new User({
     email: req.body.email,
     typeOfThesis: req.body.typeOfThesis,
@@ -94,7 +88,6 @@ app.post("/formularz", function (req, res) {
     files: req.body.files,
   });
 
-  // jesli jakis blad przy zapisaniu postu wyskakuje blad, a jak wszystko ok to przekierowuje nas do strony glownej
   user.save(function (err) {
     if (!err) {
       transporter.sendMail(mailOptions, function (error, info) {
@@ -113,7 +106,6 @@ app.post("/formularz", function (req, res) {
     }
   });
 });
-
 
 app.listen(process.env.PORT || 3000, function () {
   console.log("Server started on port 3000");
