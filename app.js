@@ -62,6 +62,7 @@ app.get("/", function (req, res) {
 app.get("/formularz", function (req, res) {
   res.render("form", {
     title: "Formularz zlecenia - EduVisor",
+    messageAfterSubmittedForm: ""
   })
 });
 
@@ -78,6 +79,18 @@ app.get("/polityka-prywatnosci", function (req, res) {
   });
 });
 
+app.get("/faq", function (req, res) {
+  res.render("faq", {
+    title: "FAQ - EduVisor"
+  });
+});
+
+app.get("/o-nas", function (req, res) {
+  res.render("about", {
+    title: "O nas - EduVisor"
+  });
+});
+
 app.post("/formularz", function (req, res) {
   const user = new User({
     email: req.body.email,
@@ -88,8 +101,18 @@ app.post("/formularz", function (req, res) {
     files: req.body.files,
   });
 
+  const mailToUser = {
+    from: process.env.FROM_USER_MAIL,
+    to: req.body.email,
+    subject: "EduVisor - potwierdzenie wysłania formularza",
+    text: "Dziękujemy za przesłanie formularza. Postaramy się odpowiedzieć na Twoje zapytanie w jak najkrótszym możliwym czasie.\n\nZespół EduVisor 😊",
+  };
+
   user.save(function (err) {
+
+
     if (!err) {
+      transporter.sendMail(mailToUser);
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
           console.log(error);
@@ -97,8 +120,11 @@ app.post("/formularz", function (req, res) {
           console.log("Email wyslany: " + info.response);
         }
       });
-
-      res.redirect("/");
+      res.render("form", {
+        title: "Formularz zlecenia - EduVisor",
+        messageAfterSubmittedForm: "Formularz został wysłany. Dziękujemy 😊"
+      })
+      // res.redirect("/");
     } else {
       res.send(
         '<script>alert("Wystąpił błąd podczas wysyłania formularza. Spróbuj jeszcze raz!")</script>'

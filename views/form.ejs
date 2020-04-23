@@ -3,9 +3,10 @@
 <%- include('./partials/title-navbar.ejs'); -%>
 
 <!-- FORMULARZ -->
+<p style="color:green;font-size:26px;"><%= messageAfterSubmittedForm %> </p>
 <section id="form">
+    <div class="container-fluid container-fluid-form">
 
-    <div class=" container-fluid container-fluid-form">
         <h2 class="h2-form">Formularz zlecenia</h2>
 
         <form class="form-frame" name="myForm" action="/formularz" method="POST">

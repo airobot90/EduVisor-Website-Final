@@ -1,0 +1,169 @@
+<%- include('./partials/header.ejs'); -%>
+
+<div class="about-container">
+
+    <%- include('./partials/title-navbar.ejs'); -%>
+
+    <!-- ABOUT-->
+
+
+    <section id="about">
+
+        <h1>O nas</h1>
+
+        <p>EduVisor to jeden z <span>największych serwisów edukacyjnych w Polsce</span>, którego celem jest dostarczenie
+            <span>kompleksowej i
+        dopasowanej do indywidualnych potrzeb</span> pomocy studentom <span>w pisaniu prac zaliczeniowych, magisterskich,
+        licencjackich i podyplomowych</span>.
+            <br>
+            <span>Naszą pomoc oferujemy przez cały okres pisania pracy.</span> Od wyboru tematu, stworzenia planu i
+            bibliografii poprzez
+            zredagowanie całości, aż po dostosowanie pracy pod względem technicznym do wymogów uczelni i naniesienia
+            ostatnich poprawek.
+            <br>
+            Posiadana wiedza i doświadczenie
+            (<span>specjalizujemy się zarówno w dziedzinach humanistycznych jak i ścisłych</span>)
+            zapewniają najwyższą jakość wyników naszej pracy. Wiemy, co jest szczególnie istotne oraz na co należy kłaść
+            największy nacisk. Dzięki naszej pomocy, prace są wysoko ocenianie przez wykładowców, promotorów oraz
+            recenzentów. <span>Do tej pory z naszej pomocy skorzystało ponad 2000 studentów.</span>
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <section class="about-footer" id="footer">
+
+        <div class="container-fluid container-fluid-footer">
+            <a class="footer-link" href="https://www.facebook.com/EduVisor-100226264995598/"><i class="fab fa-facebook-f"></i></a>
+            <a class="footer-link" href="mailto:eduvisor85@gmail.com"><i class="fas fa-envelope"></i></a>
+            <p class="copyright">© 2020 EduVisor Sp. z o.o. </p>
+            <p class="copyright">
+                <a class="footer-law"  href="/regulamin">Regulamin</a>
+                <a class="footer-law" href="/polityka-prywatnosci">Polityka prywatności</a>
+            </p>
+        </div>
+    </section>
+</div>
+
+<!-- CZAT MESSANGER -->
+<div class="fb-customerchat" page_id="100226264995598" ref="https://eduvisor.pl" minimized="true">
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+
+<!-- ZGODA NA PLIKI COOKIES -->
+<script>
+    (function () {
+        //copyright JGA 2013 under MIT License
+        var monster = {
+            set: function (e, t, n, r) {
+                var i = new Date,
+                    s = "",
+                    o = typeof t,
+                    u = "";
+                r = r || "/", n && (i.setTime(i.getTime() + n * 24 * 60 * 60 * 1e3), s = "; expires=" +
+                    i.toGMTString());
+                if (o === "object" && o !== "undefined") {
+                    if (!("JSON" in window)) throw "Bummer, your browser doesn't support JSON parsing.";
+                    u = JSON.stringify({
+                        v: t
+                    })
+                } else u = escape(t);
+                document.cookie = e + "=" + u + s + "; path=" + r
+            },
+            get: function (e) {
+                var t = e + "=",
+                    n = document.cookie.split(";"),
+                    r = "",
+                    i = "",
+                    s = {};
+                for (var o = 0; o < n.length; o++) {
+                    var u = n[o];
+                    while (u.charAt(0) == " ") u = u.substring(1, u.length);
+                    if (u.indexOf(t) === 0) {
+                        r = u.substring(t.length, u.length), i = r.substring(0, 1);
+                        if (i == "{") {
+                            s = JSON.parse(r);
+                            if ("v" in s) return s.v
+                        }
+                        return r == "undefined" ? undefined : unescape(r)
+                    }
+                }
+                return null
+            },
+            remove: function (e) {
+                this.set(e, "", -1)
+            },
+            increment: function (e, t) {
+                var n = this.get(e) || 0;
+                this.set(e, parseInt(n, 10) + 1, t)
+            },
+            decrement: function (e, t) {
+                var n = this.get(e) || 0;
+                this.set(e, parseInt(n, 10) - 1, t)
+            }
+        };
+
+        if (monster.get('cookieinfo') === 'true') {
+            return false;
+        }
+
+        var container = document.createElement('div'),
+            link = document.createElement('a');
+
+        container.setAttribute('id', 'cookieinfo');
+        container.setAttribute('class', 'cookie-alert');
+        container.innerHTML =
+            '<h6>Ta strona wykorzystuje pliki cookie</h6><p>Używamy informacji zapisanych za pomocą plików cookies w celu zapewnienia maksymalnej wygody w korzystaniu z naszego serwisu. Mogą też korzystać z nich współpracujące z nami firmy badawcze oraz reklamowe. Jeżeli wyrażasz zgodę na zapisywanie informacji zawartej w cookies kliknij na &bdquo;x&rdquo; w prawym górnym rogu tej informacji. Jeśli nie wyrażasz zgody, ustawienia dotyczące plików cookies możesz zmienić w swojej przeglądarce.</p>';
+
+        link.setAttribute('href', '#');
+        link.setAttribute('title', 'Zamknij');
+        link.innerHTML = 'x';
+
+        function clickHandler(e) {
+            if (e.preventDefault) {
+                e.preventDefault();
+            } else {
+                e.returnValue = false;
+            }
+
+            container.setAttribute('style', 'opacity: 1');
+
+            var interval = window.setInterval(function () {
+                container.style.opacity -= 0.01;
+
+                if (container.style.opacity <= 0.02) {
+                    document.body.removeChild(container);
+                    window.clearInterval(interval);
+                }
+            }, 4);
+        }
+
+        if (link.addEventListener) {
+            link.addEventListener('click', clickHandler);
+        } else {
+            link.attachEvent('onclick', clickHandler);
+        }
+
+        container.appendChild(link);
+        document.body.appendChild(container);
+
+        monster.set('cookieinfo', 'true', 365);
+
+        return true;
+    })();
+</script>
+
+</body>
+
+</html>
