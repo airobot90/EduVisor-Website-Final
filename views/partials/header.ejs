@@ -155,3 +155,11 @@
 </head>
 
 <body>
+    <script>
+        window.onblur = function () {
+            document.title = "Wróć na EduVisor :)";
+        }
+        window.onfocus = function () {
+            document.title = "<%= title %>";
+        }
+    </script>
