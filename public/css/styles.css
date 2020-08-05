@@ -38,7 +38,9 @@ span {
   padding-top: 80px;
   padding-left: 85px;
   text-align: left;
-  color: white;
+  /* color: white; */
+  color: #113f67;
+
 }
 
 /* NAVIGATION BAR */

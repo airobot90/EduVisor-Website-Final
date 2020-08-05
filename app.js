@@ -41,6 +41,7 @@ mongoose.connect(process.env.URL_DB, {
 });
 
 const userSchema = new mongoose.Schema({
+  date: Date,
   email: String,
   typeOfThesis: Array,
   scopeOfHelp: Array,
@@ -93,6 +94,7 @@ app.get("/o-nas", function (req, res) {
 
 app.post("/formularz", function (req, res) {
   const user = new User({
+    date: new Date.getTime(),
     email: req.body.email,
     typeOfThesis: req.body.typeOfThesis,
     scopeOfHelp: req.body.scopeOfHelp,
